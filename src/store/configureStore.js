@@ -17,7 +17,7 @@ import photoViewerReducer from "../reducers/photoViewer";
 import routesReducer from "../reducers/routes";
 import moverReducer from "../reducers/mover";
 
-//const composeEnchancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const composeEnchancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 export default () => {
 
@@ -41,8 +41,8 @@ export default () => {
             mover: moverReducer
         }),
 
-        applyMiddleware(thunk)
-        //composeEnchancers(applyMiddleware(thunk))
+        applyMiddleware(thunk),
+        composeEnchancers(applyMiddleware(thunk))
     )
 
     return store; 
