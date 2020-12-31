@@ -10,6 +10,7 @@ import "regenerator-runtime/runtime";
 import 'react-circular-progressbar/dist/styles.css';
 
 const store = configStore();
+
 const jsxWrapper = (
     <Provider store={store}>
         <AppRouter />
